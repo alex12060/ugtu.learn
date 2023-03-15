@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'>
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Calculator</title>
+
+  <link rel="stylesheet" media="screen" href="css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container vh-100">
+		<div class="row vh-100 justify-content-center align-items-center">
+			<div class="col">
+				<div class="row justify-content-center align-items-center" style="padding-bottom: 30px">
+					<div class="col-2 text-center" class="">
+						<h1 class="display-1" id="result">0</h1>
+					</div>
+				</div>
+				<div class="row justify-content-center align-items-center">
+					<div class="col-md-5">
+					   <input type="number" id="first" class="w-100 form-control" />
+					</div>
+					<div class="col-md-2" class="text-center">
+					    <select class="form-select" id="operand">
+							<option value="plus" selected>+</option>
+						</select>
+					</div>
+					<div class="col-md-5" >
+					  <input type="number" id="last" class="w-100 form-control" />
+					</div>
+				</div>
+			
+				<div class="row justify-content-center align-items-center">
+					<div class="col-2 text-center">
+						<button class="btn btn-primary mt-3" id="btn">Считать</button>
+					</div>
+				</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		document.getElementById("btn").onclick = function() {
+			let first = document.getElementById('first').value;
+			let last = document.getElementById('last').value;
+			let operand = document.getElementById('operand').value;
+			let result = document.getElementById('result');
+			
+			switch(operand) {
+				case 'plus':
+					result.innerHTML = parseInt(first) + parseInt(last)
+				break;
+			}
+		};
+  </script>
+</body>
+</html>
