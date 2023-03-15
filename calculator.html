@@ -25,6 +25,7 @@
 					    <select class="form-select" id="operand">
 							<option value="plus" selected>+</option>
 							<option value="minus" selected>-</option>
+							<option value="inc" selected>*</option>
 						</select>
 					</div>
 					<div class="col-md-5" >
@@ -53,6 +54,9 @@
 				break;
 				case 'minus':
 					result.innerHTML = parseInt(first) - parseInt(last)
+				break;
+				case 'inc':
+					result.innerHTML = parseInt(first) * parseInt(last)
 				break;
 			}
 		};
